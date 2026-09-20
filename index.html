@@ -36,9 +36,18 @@
         <a href="#accueil" class="header-nav-link active">Accueil</a>
         <a href="#chef" class="header-nav-link">Le Chef Pipo</a>
         <a href="#atmosphere" class="header-nav-link">Atmosphère</a>
-        <a href="#carte" class="header-nav-link">La Carte des Mets</a>
-        <a href="#traiteur" class="header-nav-link">Traiteur & Livraison</a>
-        <a href="#contact" class="header-nav-link">Réservations & Contact</a>
+        <a href="#carte" class="header-nav-link">
+          <span class="nav-label-long">La Carte des Mets</span>
+          <span class="nav-label-medium">Carte des Mets</span>
+        </a>
+        <a href="#traiteur" class="header-nav-link">
+          <span class="nav-label-long">Traiteur & Livraison</span>
+          <span class="nav-label-medium">Traiteur</span>
+        </a>
+        <a href="#contact" class="header-nav-link">
+          <span class="nav-label-long">Réservations & Contact</span>
+          <span class="nav-label-medium">Réservations</span>
+        </a>
       </nav>
 
       <div class="header-actions">
@@ -48,7 +57,8 @@
             <span class="phone-btn-icon">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
             </span>
-            <span>Contactez-nous</span>
+            <span class="phone-text-desktop">Contactez-nous</span>
+            <span class="phone-text-mobile">Contactez-nous</span>
             <span class="dropdown-chevron">▼</span>
           </button>
           <div id="phone-dropdown-menu" class="phone-dropdown-menu" role="menu">
@@ -774,7 +784,7 @@
 
         <div class="order-calc-actions-row">
           <!-- RÈGLE STRICTE DU CLIENT : AUCUN MESSAGE AUTOMATIQUE POUR WHATSAPP DE COMMANDE -->
-          <a id="btn-whatsapp-order" href="https://wa.me/213542738379" target="_blank" rel="noopener noreferrer" class="btn-submit-order-whatsapp" style="opacity: 0.7;">
+          <a id="btn-whatsapp-order" href="https://wa.me/213542738379" rel="noopener noreferrer" class="btn-submit-order-whatsapp" style="opacity: 0.7;">
             <span>TRANSMETTRE MA COMMANDE SUR WHATSAPP</span>
           </a>
           <button id="btn-clear-cart" class="btn-reset-order-cart">VIDER LA SÉLECTION</button>

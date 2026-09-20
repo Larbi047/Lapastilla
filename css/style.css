@@ -52,6 +52,7 @@ html {
   background-color: var(--color-bg);
   color: var(--color-text);
   font-family: var(--font-sans);
+  overflow-x: hidden;
 }
 
 body {
@@ -90,31 +91,40 @@ img {
   border-bottom: 2px solid var(--color-gold);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
   transition: var(--transition);
+  width: 100%;
 }
 
 .header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.85rem 2rem;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  padding: 0.75rem 2rem;
   max-width: 1300px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .header-brand {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.85rem;
+  text-decoration: none;
+  flex-shrink: 0;
+  min-width: 0;
 }
 
 .header-logo {
-  height: 46px;
+  height: 48px;
   width: auto;
+  max-width: 100%;
   object-fit: contain;
   background: #ffffff;
   padding: 3px 8px;
   border-radius: var(--radius-sm);
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transition: height 0.2s ease, padding 0.2s ease;
 }
 
 .header-title-block {
@@ -130,6 +140,7 @@ img {
   color: #ffffff;
   text-transform: uppercase;
   line-height: 1.1;
+  white-space: nowrap;
 }
 
 .header-brand-sub {
@@ -139,24 +150,37 @@ img {
   color: var(--color-gold);
   text-transform: uppercase;
   font-weight: 500;
+  white-space: nowrap;
 }
 
 .header-nav {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: clamp(0.75rem, 1.4vw, 1.8rem);
+  flex-shrink: 1;
+  min-width: 0;
 }
 
 .header-nav-link {
   font-family: var(--font-sans);
-  font-size: 0.82rem;
+  font-size: clamp(0.75rem, 0.85vw, 0.82rem);
   font-weight: 600;
-  letter-spacing: 1.4px;
+  letter-spacing: clamp(0.5px, 0.08vw, 1.2px);
   text-transform: uppercase;
   color: #ffffff;
   position: relative;
-  padding: 0.4rem 0;
+  padding: 0.4rem 0.15rem;
   transition: var(--transition);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.nav-label-long {
+  display: inline;
+}
+
+.nav-label-medium {
+  display: none;
 }
 
 .header-nav-link:hover, .header-nav-link.active {
@@ -182,7 +206,168 @@ img {
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 1.25rem;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   DROPDOWN TÉLÉPHONE INTERACTIF (APPELER OU WHATSAPP)
+   ========================================================================== */
+.phone-dropdown-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.phone-btn-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  background-color: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  border: 1.5px solid var(--color-gold);
+  border-radius: var(--radius-sm);
+  padding: 0.55rem 0.95rem;
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  transition: var(--transition);
+  white-space: nowrap;
+  -webkit-tap-highlight-color: transparent;
+  line-height: 1.2;
+}
+
+.phone-btn-trigger:hover,
+.phone-btn-trigger.active {
+  background-color: var(--color-gold);
+  color: var(--color-header);
+  box-shadow: 0 4px 14px rgba(201, 162, 39, 0.35);
+}
+
+.phone-btn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.phone-text-desktop {
+  display: inline;
+}
+
+.phone-text-mobile {
+  display: none;
+}
+
+.dropdown-chevron {
+  font-size: 0.65rem;
+  transition: transform 0.2s ease;
+  margin-left: 0.15rem;
+}
+
+.phone-btn-trigger.active .dropdown-chevron {
+  transform: rotate(180deg);
+}
+
+.phone-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  width: 260px;
+  background-color: #ffffff;
+  border: 1.5px solid var(--color-gold);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 1050;
+  animation: fadeInDropdown 0.2s ease-out;
+}
+
+.phone-dropdown-menu.show {
+  display: flex;
+}
+
+@keyframes fadeInDropdown {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.phone-dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem;
+  text-decoration: none;
+  color: var(--color-text);
+  border-bottom: 1px solid rgba(15, 81, 50, 0.08);
+  transition: background-color 0.15s ease;
+}
+
+.phone-dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.phone-dropdown-item:hover {
+  background-color: #f4efe6;
+}
+
+.dropdown-item-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.dropdown-item-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-item-text strong {
+  font-size: 0.88rem;
+  color: var(--color-header);
+}
+
+.dropdown-item-text small {
+  font-size: 0.75rem;
+  color: #555555;
+}
+
+/* ==========================================================================
+   BOUTON MENU MOBILE (BURGER)
+   ========================================================================== */
+.mobile-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
+  background: transparent;
+  border: 1.5px solid rgba(201, 162, 39, 0.6);
+  border-radius: var(--radius-sm);
+  color: #ffffff;
+  font-size: 1.45rem;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+  transition: var(--transition);
+  -webkit-tap-highlight-color: transparent;
+  flex-shrink: 0;
+}
+
+.mobile-toggle:hover,
+.mobile-toggle:focus {
+  background-color: rgba(201, 162, 39, 0.2);
+  border-color: var(--color-gold);
+  color: var(--color-gold);
 }
 
 /* Boutons personnalisés */
@@ -236,15 +421,6 @@ img {
   background-color: var(--color-gold);
   color: #0f5132 !important;
   transform: translateY(-2px);
-}
-
-.mobile-toggle {
-  display: none;
-  background: transparent;
-  border: none;
-  color: #ffffff;
-  font-size: 1.6rem;
-  cursor: pointer;
 }
 
 /* ==========================================================================
@@ -1940,5 +2116,360 @@ img {
   background-color: var(--color-gold);
   color: var(--color-header);
 }
+
+/* ==========================================================================
+   STYLES DU BLOC DE CONFIRMATION DE RÉSERVATION (#booking-alert-status)
+   ========================================================================== */
+#booking-alert-status {
+  background-color: #d1e7dd;
+  color: #0f5132;
+  border: 1.5px solid #0F5132;
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.25rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+#booking-alert-status code {
+  background-color: rgba(15, 81, 50, 0.12);
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+  font-weight: 700;
+  color: #0f5132;
+}
+
+#booking-alert-status .btn-main {
+  background-color: var(--color-header);
+  color: #ffffff !important;
+  border: 1px solid var(--color-gold);
+  border-radius: 6px;
+  padding: 0.6rem 1.25rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  transition: var(--transition);
+  -webkit-tap-highlight-color: transparent;
+}
+
+#booking-alert-status .btn-main:hover,
+#booking-alert-status .btn-main:active {
+  background-color: var(--color-gold) !important;
+  color: var(--color-header) !important;
+  border-color: var(--color-gold) !important;
+}
+
+/* ==========================================================================
+   AFFICHAGE GRAND ÉCRAN (DESKTOP > 992px)
+   ========================================================================== */
+@media (min-width: 993px) {
+  .header-container {
+    padding: 0.85rem clamp(1rem, 2vw, 2rem);
+    max-width: 1440px;
+    gap: clamp(0.75rem, 1.5vw, 1.5rem);
+  }
+
+  .header-brand {
+    flex-shrink: 0;
+    gap: clamp(0.5rem, 1vw, 0.85rem);
+  }
+
+  .header-nav {
+    display: flex !important;
+    position: static !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: clamp(0.6rem, 1.2vw, 1.6rem) !important;
+    background: transparent !important;
+    padding: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    width: auto !important;
+    z-index: auto !important;
+    flex-shrink: 1;
+    min-width: 0;
+  }
+
+  .header-nav-link {
+    font-size: clamp(0.72rem, 0.82vw, 0.82rem);
+    letter-spacing: clamp(0.5px, 0.08vw, 1.2px);
+    padding: 0.4rem 0.15rem;
+    border-bottom: none !important;
+    width: auto !important;
+    color: #ffffff;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .header-logo {
+    height: 48px !important;
+  }
+
+  .header-brand-sub {
+    display: block !important;
+  }
+
+  .phone-btn-trigger {
+    padding: 0.55rem clamp(0.65rem, 1vw, 0.95rem) !important;
+    font-size: clamp(0.76rem, 0.82vw, 0.82rem) !important;
+  }
+
+  .phone-text-desktop {
+    display: inline !important;
+  }
+
+  .phone-text-mobile {
+    display: none !important;
+  }
+
+  .mobile-toggle {
+    display: none !important;
+  }
+}
+
+/* Ajustement intelligent pour écrans PC / Laptops intermédiaires (993px à 1280px) */
+@media (min-width: 993px) and (max-width: 1280px) {
+  .header-brand-name {
+    font-size: 1.22rem;
+  }
+
+  .header-brand-sub {
+    font-size: 0.62rem;
+  }
+
+  .header-logo {
+    height: 42px !important;
+  }
+
+  .nav-label-long {
+    display: none;
+  }
+
+  .nav-label-medium {
+    display: inline;
+  }
+}
+
+/* Très grands écrans (> 1280px) : labels complets */
+@media (min-width: 1281px) {
+  .nav-label-long {
+    display: inline;
+  }
+
+  .nav-label-medium {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   AFFICHAGE MOBILE & TABLETTES (ÉCRANS <= 992px)
+   ========================================================================== */
+
+/* Tablettes & Écrans intermédiaires (<= 992px) */
+@media (max-width: 992px) {
+  .nav-label-long {
+    display: inline !important;
+  }
+
+  .nav-label-medium {
+    display: none !important;
+  }
+
+  .header-container {
+    padding: 0.75rem 1.5rem;
+    position: relative;
+  }
+
+  .header-nav {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--color-header);
+    border-top: 1px solid rgba(201, 162, 39, 0.35);
+    border-bottom: 2px solid var(--color-gold);
+    padding: 0.85rem 1.5rem 1.25rem;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.35);
+    z-index: 999;
+  }
+
+  .header-nav.mobile-open {
+    display: flex !important;
+    animation: fadeInDropdown 0.22s ease-out;
+  }
+
+  .header-nav-link {
+    width: 100%;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    font-size: 0.9rem;
+  }
+
+  .header-nav-link:last-child {
+    border-bottom: none;
+  }
+
+  .header-nav-link::after {
+    display: none;
+  }
+
+  .mobile-toggle {
+    display: flex !important;
+  }
+}
+
+/* Smartphones standards (<= 768px) */
+@media (max-width: 768px) {
+  .header-container {
+    padding: 0.65rem 1rem;
+    gap: 0.75rem;
+  }
+
+  .header-brand {
+    gap: 0.65rem;
+  }
+
+  .header-logo {
+    height: 42px;
+    padding: 2px 6px;
+  }
+
+  .header-brand-name {
+    font-size: 1.25rem;
+    letter-spacing: 1.5px;
+  }
+
+  .header-brand-sub {
+    font-size: 0.65rem;
+    letter-spacing: 1px;
+  }
+
+  .header-actions {
+    gap: 0.6rem;
+  }
+
+  .phone-btn-trigger {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.78rem;
+  }
+
+  .phone-dropdown-menu {
+    width: 240px;
+  }
+}
+
+/* Écrans étroits (<= 520px) : Masquage du sous-titre et libellé compact */
+@media (max-width: 520px) {
+  .header-brand-sub {
+    display: none !important;
+  }
+
+  .phone-text-desktop {
+    display: none !important;
+  }
+
+  .phone-text-mobile {
+    display: inline !important;
+  }
+}
+
+/* Smartphones compacts (<= 480px, ex. 414px, 390px, 375px) */
+@media (max-width: 480px) {
+  .header-container {
+    padding: 0.5rem 0.75rem;
+    gap: 0.5rem;
+  }
+
+  .header-brand {
+    gap: 0.5rem;
+    max-width: calc(100% - 175px);
+    overflow: hidden;
+  }
+
+  .header-logo {
+    height: 38px;
+    padding: 2px 5px;
+  }
+
+  .header-brand-name {
+    font-size: 1.08rem;
+    letter-spacing: 1px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .header-actions {
+    gap: 0.45rem;
+  }
+
+  .phone-btn-trigger {
+    padding: 0.4rem 0.65rem;
+    font-size: 0.75rem;
+    gap: 0.35rem;
+  }
+
+  .mobile-toggle {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    min-height: 42px;
+    font-size: 1.35rem;
+  }
+
+  .phone-dropdown-menu {
+    width: calc(100vw - 1.5rem);
+    max-width: 250px;
+    right: 0;
+  }
+}
+
+/* Écrans ultra-compacts (<= 360px) */
+@media (max-width: 360px) {
+  .header-container {
+    padding: 0.45rem 0.5rem;
+    gap: 0.35rem;
+  }
+
+  .header-brand {
+    gap: 0.35rem;
+    max-width: calc(100% - 150px);
+  }
+
+  .header-logo {
+    height: 34px;
+    padding: 2px 4px;
+  }
+
+  .header-brand-name {
+    font-size: 0.95rem;
+    letter-spacing: 0.8px;
+  }
+
+  .header-actions {
+    gap: 0.35rem;
+  }
+
+  .phone-btn-trigger {
+    padding: 0.35rem 0.5rem;
+    font-size: 0.72rem;
+    gap: 0.25rem;
+  }
+
+  .mobile-toggle {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+    min-height: 38px;
+    font-size: 1.25rem;
+  }
+}
+
 
 

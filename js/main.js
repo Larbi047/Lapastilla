@@ -8,31 +8,40 @@ document.addEventListener('DOMContentLoaded', () => {
   'use strict';
 
   // ==========================================================================
-  // 1. GESTION DU MENU MOBILE
+  // 1. GESTION DU MENU MOBILE (BURGER & LIENS)
   // ==========================================================================
   const mobileToggle = document.querySelector('.mobile-toggle');
   const navMenu = document.querySelector('.header-nav');
 
   if (mobileToggle && navMenu) {
-    mobileToggle.addEventListener('click', () => {
-      const isVisible = navMenu.style.display === 'flex';
-      navMenu.style.display = isVisible ? 'none' : 'flex';
-      navMenu.style.flexDirection = 'column';
-      navMenu.style.position = 'absolute';
-      navMenu.style.top = '100%';
-      navMenu.style.left = '0';
-      navMenu.style.right = '0';
-      navMenu.style.background = '#0F5132';
-      navMenu.style.padding = '1.5rem';
-      navMenu.style.borderBottom = '2px solid #C9A227';
+    mobileToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      navMenu.classList.toggle('mobile-open');
+      const isExpanded = navMenu.classList.contains('mobile-open');
+      mobileToggle.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
     });
 
     document.querySelectorAll('.header-nav-link').forEach(link => {
       link.addEventListener('click', () => {
         if (window.innerWidth <= 992) {
-          navMenu.style.display = 'none';
+          navMenu.classList.remove('mobile-open');
+          mobileToggle.setAttribute('aria-expanded', 'false');
         }
       });
+    });
+
+    document.addEventListener('click', (e) => {
+      if (window.innerWidth <= 992 && !mobileToggle.contains(e.target) && !navMenu.contains(e.target)) {
+        navMenu.classList.remove('mobile-open');
+        mobileToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 992) {
+        navMenu.classList.remove('mobile-open');
+        mobileToggle.setAttribute('aria-expanded', 'false');
+      }
     });
   }
 
@@ -206,7 +215,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Feedback visuel accessible
       const originalText = btn.textContent;
-      btn.textContent = '\u2713 Ajout\u00E9';
+      btn.textContent = 'Ajouté !';
       btn.style.backgroundColor = 'var(--color-gold)';
       btn.style.color = '#0F5132';
 
@@ -280,14 +289,15 @@ document.addEventListener('DOMContentLoaded', () => {
         msg += `TOTAL COMMANDE (Devis) : ${totalPrice.toLocaleString('fr-FR')} DA\n\n`;
         msg += "Merci de me confirmer la commande et le délai de préparation.";
 
-        btnWhatsAppOrder.href = `https://wa.me/213542738379?text=${encodeURIComponent(msg)}`;
+        const waUrl = `https://wa.me/213542738379?text=${encodeURIComponent(msg)}`;
+        btnWhatsAppOrder.href = waUrl;
         btnWhatsAppOrder.style.opacity = '1';
         btnWhatsAppOrder.style.pointerEvents = 'auto';
       } else {
         btnWhatsAppOrder.href = 'https://wa.me/213542738379?text=' + encodeURIComponent("Bonjour Restaurant La Pastilla, je souhaite passer une commande.");
         btnWhatsAppOrder.style.opacity = '0.7';
       }
-      btnWhatsAppOrder.target = '_blank';
+      btnWhatsAppOrder.removeAttribute('target');
     }
   }
 
@@ -296,9 +306,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (btnWhatsAppOrder) {
     btnWhatsAppOrder.addEventListener('click', (e) => {
+      e.preventDefault();
       if (cart.length === 0) {
-        e.preventDefault();
         alert('Veuillez d\'abord ajouter des plats à votre commande avant de transmettre sur WhatsApp.');
+        return;
+      }
+      const waUrl = btnWhatsAppOrder.getAttribute('href');
+      if (waUrl && waUrl !== '#') {
+        window.location.href = waUrl;
       }
     });
   }
@@ -372,15 +387,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const randomId = Math.floor(1000 + Math.random() * 9000);
       const reservationId = `RES-${dateCode}-${randomId}`;
 
-      // Notification visuelle de confirmation dans la page
-      if (alertStatus) {
-        alertStatus.style.display = 'block';
-        alertStatus.style.backgroundColor = '#d1e7dd';
-        alertStatus.style.color = '#0f5132';
-        alertStatus.style.border = '1px solid #badbcc';
-        alertStatus.innerHTML = `<strong>R\u00E9servation pr\u00E9par\u00E9e !</strong> R\u00E9f\u00E9rence : <code>${reservationId}</code>.<br>Service : <strong>${time}</strong>.<br>Ouverture de WhatsApp pour la transmission finale au restaurant...`;
-      }
-
       // Préparation du message WhatsApp officiel pour la réservation
       const waMsg = encodeURIComponent(
         `Bonjour Restaurant La Pastilla (S\u00E9tif),\n` +
@@ -393,12 +399,31 @@ document.addEventListener('DOMContentLoaded', () => {
         `\u2022 Nombre de convives : ${guests}\n` +
         `\u2022 Demande particuli\u00E8re : ${notes}`
       );
+      const waUrl = `https://wa.me/213542738379?text=${waMsg}`;
 
-      // Déclenchement vers WhatsApp
-      setTimeout(() => {
-        window.open(`https://wa.me/213542738379?text=${waMsg}`, '_blank');
-        bookingForm.reset();
-      }, 1200);
+      // Notification visuelle de confirmation dans la page avec bouton de secours
+      if (alertStatus) {
+        alertStatus.style.display = 'block';
+        alertStatus.style.backgroundColor = '#d1e7dd';
+        alertStatus.style.color = '#0f5132';
+        alertStatus.style.border = '1px solid #badbcc';
+        alertStatus.innerHTML = `
+          <div style="font-weight: 700; margin-bottom: 0.35rem;">R\u00E9servation pr\u00E9par\u00E9e !</div>
+          <div style="margin-bottom: 0.25rem;">R\u00E9f\u00E9rence : <code>${reservationId}</code></div>
+          <div style="margin-bottom: 0.25rem;">Service : <strong>${time}</strong></div>
+          <div style="margin-top: 0.35rem; font-size: 0.85rem;">Redirection vers WhatsApp en cours...</div>
+          <div style="margin-top: 0.75rem;">
+            <a href="${waUrl}" class="btn-main" style="display: inline-block; padding: 0.6rem 1.25rem; font-size: 0.85rem; font-weight: 600; text-decoration: none; border-radius: 6px; background-color: #0F5132; color: #ffffff; border: 1px solid #C9A227;">
+              Ouvrir WhatsApp manuellement
+            </a>
+          </div>
+        `;
+      }
+
+      bookingForm.reset();
+
+      // Redirection directe sans setTimeout ni window.open (non bloquée par iOS Safari et Android Chrome)
+      window.location.href = waUrl;
     });
   }
 });
