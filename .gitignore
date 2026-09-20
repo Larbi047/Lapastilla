@@ -1,0 +1,34 @@
+# ==============================================================================
+# RESTAURANT LA PASTILLA — FICHIER GITIGNORE OFFICIEL
+# ==============================================================================
+
+# Fichiers d'environnement et secrets
+.env
+.env.local
+.env.*.local
+
+# Fichiers de log et métriques de débogage
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Fichiers système d'exploitation
+.DS_Store
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# Configuration d'éditeurs et d'IDE
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Dépendances et builds (si applicables)
+node_modules/
+dist/
+build/
+.tmp/

@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Pastilla — Cuisine Traditionnelle Raffinée & Authentique • Sétif</title>
+  <meta name="description" content="Restaurant La Pastilla à Sétif. Cuisine traditionnelle raffinée et authentique, pastillas croustillantes artisanales, tajines mijotés et grillades d'exception.">
+
+  <!-- Favicon officiel -->
+  <link rel="icon" type="image/png" href="assets/logo-la-pastilla.png">
+
+  <!-- Typographie officielle : Playfair Display + Montserrat + Amiri -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       HEADER (#0F5132 & ACCENTS #C9A227)
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="header-container">
+      
+      <a href="#accueil" class="header-brand">
+        <img src="assets/logo-la-pastilla.png" alt="Logo La Pastilla Sétif" class="header-logo">
+        <div class="header-title-block">
+          <span class="header-brand-name">La Pastilla</span>
+          <span class="header-brand-sub">Sétif • Haute Tradition Culinaire</span>
+        </div>
+      </a>
+
+      <nav class="header-nav">
+        <a href="#accueil" class="header-nav-link active">Accueil</a>
+        <a href="#chef" class="header-nav-link">Le Chef Pipo</a>
+        <a href="#atmosphere" class="header-nav-link">Atmosphère</a>
+        <a href="#carte" class="header-nav-link">La Carte des Mets</a>
+        <a href="#traiteur" class="header-nav-link">Traiteur & Livraison</a>
+        <a href="#contact" class="header-nav-link">Réservations & Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Déroulant interactif : Numéro de téléphone (Appeler ou WhatsApp) -->
+        <div class="phone-dropdown-wrapper">
+          <button id="phone-dropdown-btn" class="phone-btn-trigger" aria-haspopup="true" aria-expanded="false" title="Contacter le restaurant">
+            <span class="phone-btn-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            </span>
+            <span>Contactez-nous</span>
+            <span class="dropdown-chevron">▼</span>
+          </button>
+          <div id="phone-dropdown-menu" class="phone-dropdown-menu" role="menu">
+            <a href="tel:+213542738379" class="phone-dropdown-item" role="menuitem">
+              <span class="dropdown-item-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="#0F5132"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              </span>
+              <div class="dropdown-item-text">
+                <strong>Appeler</strong>
+                <small>0542 73 83 79 (Appel direct)</small>
+              </div>
+            </a>
+            <a href="https://wa.me/213542738379?text=Bonjour%20Restaurant%20La%20Pastilla,%20je%20souhaite%20des%20informations." target="_blank" rel="noopener noreferrer" class="phone-dropdown-item" role="menuitem">
+              <span class="dropdown-item-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="#25D366"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm5.8 14.07c-.24.67-1.39 1.28-1.92 1.36-.5.08-1.15.11-3.6-0.89-3.13-1.28-5.14-4.47-5.3-4.68-.16-.21-1.27-1.69-1.27-3.23 0-1.54.81-2.3 1.1-2.6.29-.31.63-.38.84-.38.21 0 .43 0 .61.01.2.01.46-.07.72.55.27.63.91 2.22.99 2.38.08.16.14.35.03.56-.11.21-.17.34-.33.53-.16.19-.34.42-.48.56-.16.16-.33.34-.14.67.19.32.84 1.39 1.8 2.25 1.24 1.11 2.29 1.45 2.61 1.61.32.16.51.14.7-.08.19-.22.81-.94 1.03-1.27.21-.32.43-.27.72-.16.29.11 1.85.87 2.17 1.03.32.16.53.24.61.38.08.13.08.79-.16 1.46z"/></svg>
+              </span>
+              <div class="dropdown-item-text">
+                <strong>WhatsApp</strong>
+                <small>0542 73 83 79 (Discussion en direct)</small>
+              </div>
+            </a>
+          </div>
+        </div>
+        <button class="mobile-toggle" aria-label="Menu Mobile">☰</button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       RUBAN ÉDITORIAL DÉFILANT
+       ========================================================================== -->
+  <div class="editorial-ticker">
+    <div class="ticker-track">
+      <span class="ticker-item"><span class="ticker-star">✦</span> LA PASTILLA • SÉTIF</span>
+      <span class="ticker-item"><span class="ticker-star">✦</span> CUISINE TRADITIONNELLE RAFFINÉE & AUTHENTIQUE</span>
+      <span class="ticker-item"><span class="ticker-star">✦</span> VÉRITABLES TAJINES EN TERRE ÉMAILLÉE</span>
+      <span class="ticker-item"><span class="ticker-star">✦</span> PASTILLAS CROUSTILLANTES ARTISANALES</span>
+      <span class="ticker-item"><span class="ticker-star">✦</span> SERVICE DÉJEUNER 11H30 – 15H30 • SERVICE DÎNER 18H30 – 23H00</span>
+      <span class="ticker-item"><span class="ticker-star">✦</span> 05 RUE AÏSSA MALKI, QUARTIER DALLAS, SÉTIF</span>
+      <span class="ticker-item"><span class="ticker-star">✦</span> LA PASTILLA • SÉTIF</span>
+      <span class="ticker-item"><span class="ticker-star">✦</span> CUISINE TRADITIONNELLE RAFFINÉE & AUTHENTIQUE</span>
+      <span class="ticker-item"><span class="ticker-star">✦</span> VÉRITABLES TAJINES EN TERRE ÉMAILLÉE</span>
+      <span class="ticker-item"><span class="ticker-star">✦</span> PASTILLAS CROUSTILLANTES ARTISANALES</span>
+      <span class="ticker-item"><span class="ticker-star">✦</span> SERVICE DÉJEUNER 11H30 – 15H30 • SERVICE DÎNER 18H30 – 23H00</span>
+      <span class="ticker-item"><span class="ticker-star">✦</span> 05 RUE AÏSSA MALKI, QUARTIER DALLAS, SÉTIF</span>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       HERO SECTION (BACKGROUND PHOTO GOOGLE MAPS 'KAT PASTILLA')
+       ========================================================================== -->
+  <section id="accueil" class="hero-editorial hero-with-photo-bg">
+    <div class="hero-bg-overlay"></div>
+    <div class="container hero-content-stacked">
+      
+      <div class="hero-editorial-content">
+        <div class="hero-kicker">
+          <span class="hero-kicker-line"></span>
+          <span>Maison Fondée sur la Tradition • Sétif</span>
+        </div>
+
+        <h1 class="hero-editorial-title">
+          L'Art Noble du Tajine & de la <em>Pastilla d'Exception</em>
+        </h1>
+
+        <p class="hero-editorial-p">
+          Dans une atmosphère feutrée au cœur de Sétif, le restaurant <strong>La Pastilla</strong> célèbre 
+          les grands classiques de la cuisine traditionnelle raffinée. Viandes confites mijotées au feu doux, 
+          dentelle croustillante d'amandes et grillades d'exception.
+        </p>
+
+        <div class="hero-btn-row">
+          <a href="#carte" class="btn-main">Découvrir la Carte & Prix</a>
+          <a href="#reservation" class="btn-gold-outline">Réserver une Table</a>
+        </div>
+      </div>
+
+      <!-- CARTES HERO EN EFFET VERRE DÉPOLI (STYLE IDENTIQUE À L'IMAGE DE RÉFÉRENCE) -->
+      <div class="hero-frosted-cards">
+        <div class="hero-frosted-card">
+          <div class="hero-frosted-card-title">Mijotage Lent</div>
+          <div class="hero-frosted-card-sub">Tajines en terre cuite</div>
+        </div>
+        <div class="hero-frosted-card">
+          <div class="hero-frosted-card-title">100% Frais</div>
+          <div class="hero-frosted-card-sub">Viandes sélectionnées</div>
+        </div>
+        <div class="hero-frosted-card">
+          <div class="hero-frosted-card-title">Horaires de Service</div>
+          <div class="hero-frosted-card-sub">11h30–15h30 & 18h30–23h00 (Lundi–Samedi)</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION DU CHEF : LE CHEF EXÉCUTIF - PIPO
+       ========================================================================== -->
+  <section id="chef" class="section-chef-editorial">
+    <div class="container">
+      <div class="chef-editorial-grid">
+        
+        <div class="chef-visual-frame">
+          <div class="chef-clean-container">
+            <img src="assets/chef-pipo.jpg" alt="Le Chef Exécutif - Pipo du restaurant La Pastilla Sétif" class="chef-img-clean">
+          </div>
+        </div>
+
+        <div class="chef-text-editorial">
+          <span class="section-eyebrow-gold">Maîtrise & Passion Culinaire</span>
+          <h2 class="section-title-editorial">Le Chef Exécutif - Pipo</h2>
+          <div class="section-sep-gold"></div>
+
+          <!-- Texte épuré selon consigne : suppression de 'gardien' jusqu'à 'torréfié' -->
+          <p class="chef-editorial-lead">
+            Sous la direction du <strong>Chef Exécutif - Pipo</strong>, notre équipe sélectionne chaque jour les viandes les plus fraîches, les épices pures de première cueillette et les légumes du terroir local.
+          </p>
+
+          <div class="chef-quote-editorial">
+            <p class="chef-quote-text">« La vraie cuisine ne triche pas. Elle demande de la patience, de la ferveur et un amour inconditionnel du partage. »</p>
+            <span class="chef-quote-author">— Le Chef Exécutif - Pipo</span>
+          </div>
+
+          <div class="chef-btn-row" style="margin-top: 2rem;">
+            <a href="#carte" class="btn-main">Consulter la Carte du Chef</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION ATMOSPHÈRE & ART DE LA TABLE (INTERACTIVE & SÉLECTIONNABLE)
+       ========================================================================== -->
+  <section id="atmosphere" class="section-atmosphere-editorial">
+    <div class="container">
+      
+      <div class="section-header-editorial">
+        <span class="section-eyebrow-gold">Immersion Visuelle & Galerie Interactive</span>
+        <h2 class="section-title-editorial">Atmosphère & Art de la Table</h2>
+        <div class="section-sep-gold"></div>
+        <p class="section-desc-editorial">
+          Cliquez sur une photographie pour la sélectionner et l'agrandir en haute définition avec ses détails.
+        </p>
+      </div>
+
+      <div class="gmaps-decor-grid">
+        
+        <!-- Photo 1 : Pastilla signature -->
+        <div class="gmaps-decor-card" tabindex="0" role="button" aria-label="Agrandir Pastilla Royale Artisanale">
+          <div class="gmaps-decor-img-wrap">
+            <img src="assets/hero-kat-pastilla.jpg" alt="Plat de 4 pastillas traditionnelles La Pastilla Sétif" class="gmaps-decor-img" loading="lazy">
+          </div>
+          <div class="gmaps-decor-body">
+            <h4 class="gmaps-decor-title">Pastilla Royale Artisanale</h4>
+            <p class="gmaps-decor-desc">Feuilles de ouarka croustillantes dorées au four, amandes grillées et sucre glace.</p>
+          </div>
+        </div>
+
+        <!-- Photo 2 : Tajine kefta -->
+        <div class="gmaps-decor-card" tabindex="0" role="button" aria-label="Agrandir Tajine Kefta aux Œufs">
+          <div class="gmaps-decor-img-wrap">
+            <img src="assets/kat-pastilla.jpg" alt="Tajine kefta aux œufs et sauce tomate mijotée" class="gmaps-decor-img" loading="lazy">
+          </div>
+          <div class="gmaps-decor-body">
+            <h4 class="gmaps-decor-title">Tajine Kefta aux Œufs</h4>
+            <p class="gmaps-decor-desc">Boulettes de bœuf assaisonnées, sauce tomate mijotée et œufs pochés à cœur.</p>
+          </div>
+        </div>
+
+        <!-- Photo 3 : Grillades au charbon de bois (Google Maps) -->
+        <div class="gmaps-decor-card" tabindex="0" role="button" aria-label="Agrandir Grillades au Feu de Braise">
+          <div class="gmaps-decor-img-wrap">
+            <img src="assets/atmosphere-gmaps-1.jpg" alt="Brochettes et grillades au charbon de braise La Pastilla" class="gmaps-decor-img" loading="lazy">
+          </div>
+          <div class="gmaps-decor-body">
+            <h4 class="gmaps-decor-title">Grillades au Feu de Braise</h4>
+            <p class="gmaps-decor-desc">Brochettes de viandes sélectionnées et kefta saisies sur charbon de bois ardent.</p>
+          </div>
+        </div>
+
+        <!-- Photo 4 : Salade Océane fraîcheur (Google Maps) -->
+        <div class="gmaps-decor-card" tabindex="0" role="button" aria-label="Agrandir Salade Océane Fraîcheur">
+          <div class="gmaps-decor-img-wrap">
+            <img src="assets/atmosphere-gmaps-2.jpg" alt="Salade Océane fraîcheur du restaurant La Pastilla" class="gmaps-decor-img" loading="lazy">
+          </div>
+          <div class="gmaps-decor-body">
+            <h4 class="gmaps-decor-title">Salade Océane Fraîcheur</h4>
+            <p class="gmaps-decor-desc">Cœur de laitue croquante, thon, tomates, concombres et œufs de ferme.</p>
+          </div>
+        </div>
+
+        <!-- Photo 5 : Intérieur et ambiance -->
+        <div class="gmaps-decor-card" tabindex="0" role="button" aria-label="Agrandir Pause Douceur & Pâtisseries">
+          <div class="gmaps-decor-img-wrap">
+            <img src="assets/atmosphere-interior.jpg" alt="Cadre feutré et salle de dégustation La Pastilla Sétif" class="gmaps-decor-img" loading="lazy">
+          </div>
+          <div class="gmaps-decor-body">
+            <h4 class="gmaps-decor-title">Pause Douceur & Pâtisseries</h4>
+            <p class="gmaps-decor-desc">Un cadre élégant et feutré idéal pour vos déjeuners et dîners conviviaux.</p>
+          </div>
+        </div>
+
+        <!-- Photo 6 : Tajine en terre cuite -->
+        <div class="gmaps-decor-card" tabindex="0" role="button" aria-label="Agrandir L'Art de la Terre Cuite">
+          <div class="gmaps-decor-img-wrap">
+            <img src="assets/gm-photo-1.jpg" alt="Tajine traditionnel en terre cuite émaillée" class="gmaps-decor-img" loading="lazy">
+          </div>
+          <div class="gmaps-decor-body">
+            <h4 class="gmaps-decor-title">L'Art de la Terre Cuite</h4>
+            <p class="gmaps-decor-desc">Cuisson lente préservant chaque arôme dans des plats en terre émaillée.</p>
+          </div>
+        </div>
+
+        <!-- Photo 7 : Service à thé traditionnel -->
+        <div class="gmaps-decor-card" tabindex="0" role="button" aria-label="Agrandir Cérémonie du Thé à la Menthe">
+          <div class="gmaps-decor-img-wrap">
+            <img src="assets/gm-photo-2.jpg" alt="Théière traditionnelle en argent et verres ciselés" class="gmaps-decor-img" loading="lazy">
+          </div>
+          <div class="gmaps-decor-body">
+            <h4 class="gmaps-decor-title">Cérémonie du Thé à la Menthe</h4>
+            <p class="gmaps-decor-desc">Théière traditionnelle en argent ciselé, menthe fraîche et verres décorés.</p>
+          </div>
+        </div>
+
+        <!-- Photo 8 : Harira traditionnelle -->
+        <div class="gmaps-decor-card" tabindex="0" role="button" aria-label="Agrandir La Harira Fumante">
+          <div class="gmaps-decor-img-wrap">
+            <img src="assets/gm-photo-3.jpg" alt="Soupe traditionnelle Hrira aux pois chiches et épices" class="gmaps-decor-img" loading="lazy">
+          </div>
+          <div class="gmaps-decor-body">
+            <h4 class="gmaps-decor-title">La Harira Fumante</h4>
+            <p class="gmaps-decor-desc">Velouté généreux aux pois chiches, céleri, tomates et mélange d'épices pures.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX MODAL POUR LA GALERIE ATMOSPHÈRE INTERACTIVE -->
+  <div id="atmosphere-lightbox-modal" class="atmosphere-lightbox-backdrop" role="dialog" aria-modal="true">
+    <div class="atmosphere-lightbox-content">
+      <button id="lightbox-btn-close" class="lightbox-btn-close" aria-label="Fermer la vue">&times;</button>
+      <button id="lightbox-btn-prev" class="lightbox-btn-nav lightbox-btn-prev" aria-label="Photo précédente">&#8249;</button>
+      <button id="lightbox-btn-next" class="lightbox-btn-nav lightbox-btn-next" aria-label="Photo suivante">&#8250;</button>
+      <div class="lightbox-img-wrap">
+        <img id="lightbox-display-img" src="assets/hero-kat-pastilla.jpg" alt="Vue agrandie atmosphère">
+      </div>
+      <div class="lightbox-caption-box">
+        <h4 id="lightbox-display-title">Titre du plat</h4>
+        <p id="lightbox-display-desc">Description détaillée</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       SECTION LA CARTE DES METS (100% CONFORME AU PDF OFFICIEL)
+       ========================================================================== -->
+  <section id="carte" class="section-menu-accessible">
+    <div class="container">
+      
+      <div class="section-header-editorial">
+        <span class="section-eyebrow-gold">Menu Officiel Imprimé</span>
+        <h2 class="section-title-editorial">La Carte des Mets</h2>
+        <div class="section-sep-gold"></div>
+        <p class="section-desc-editorial">
+          CUISINE TRADITIONNELLE RAFFINÉE & AUTHENTIQUE • Tarifs en Dinars Algériens (DA).<br>
+          Cliquez sur <strong>+ Ajouter</strong> pour composer votre commande.
+        </p>
+        <!-- Bouton unique selon consigne : Télécharger le menu uniquement -->
+        <div style="margin-top: 1.25rem; display: flex; justify-content: center;">
+          <a href="assets/menu-la-pastilla.pdf" target="_blank" class="btn-main" style="padding: 0.8rem 1.8rem;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 0.5rem; vertical-align: middle;"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+            <span>Télécharger le Menu PDF</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Filtres rapides par catégorie -->
+      <div class="menu-filters-bar">
+        <button class="menu-filter-btn active" data-category="all">Tous les mets</button>
+        <button class="menu-filter-btn" data-category="entrees-froides">Entrées Froides</button>
+        <button class="menu-filter-btn" data-category="entrees-chaudes">Entrées Chaudes</button>
+        <button class="menu-filter-btn" data-category="tajines">Tajines</button>
+        <button class="menu-filter-btn" data-category="brochettes">Brochettes</button>
+        <button class="menu-filter-btn" data-category="boissons">Boissons</button>
+        <button class="menu-filter-btn" data-category="desserts">Desserts</button>
+      </div>
+
+      <!-- CONTENEUR DES CATÉGORIES OFFICIELLES (PDF) -->
+      <div class="menu-categories-container">
+
+        <!-- 1. ENTRÉES FROIDES (مقبلات باردة) -->
+        <div class="menu-category-group" data-category="entrees-froides">
+          <div class="menu-category-header">
+            <h3 class="category-title">Entrées Froides • مقبلات باردة</h3>
+    
+          </div>
+          <div class="menu-list-items">
+            
+            <div class="menu-row-item" data-name="Mechouia" data-price="300">
+              <div class="item-main-details">
+                <div class="item-heading-line">
+                  <span class="item-name-fr">Mechouia</span>
+                  <span class="item-name-ar">مشوية</span>
+                  <span class="dish-badge-pill">Entrée Froide</span>
+                </div>
+                <p class="item-description-text">Tomates et poivrons grillés • طماطم و فلفل مشوي</p>
+              </div>
+              <div class="item-price-actions">
+                <div class="item-price-val">300 DA</div>
+                <button class="btn-add-accessible" aria-label="Ajouter Mechouia à ma commande">+ Ajouter</button>
+              </div>
+            </div>
+
+            <div class="menu-row-item" data-name="Zaalouk" data-price="300">
+              <div class="item-main-details">
+                <div class="item-heading-line">
+                  <span class="item-name-fr">Zaalouk</span>
+                  <span class="item-name-ar">زعلوك</span>
+                  <span class="dish-badge-pill">Entrée Froide</span>
+                </div>
+                <p class="item-description-text">Salade d'aubergines grillées • سلطة الباذنجان المشوي</p>
+              </div>
+              <div class="item-price-actions">
+                <div class="item-price-val">300 DA</div>
+                <button class="btn-add-accessible" aria-label="Ajouter Zaalouk à ma commande">+ Ajouter</button>
+              </div>
+            </div>
+
+            <div class="menu-row-item" data-name="Salade Fraîcheur" data-price="400">
+              <div class="item-main-details">
+                <div class="item-heading-line">
+                  <span class="item-name-fr">Salade Fraîcheur</span>
+                  <span class="item-name-ar">سلطة منعشة</span>
+                  <span class="dish-badge-pill">Entrée Froide</span>
+                </div>
+                <p class="item-description-text">Tomates fraîches, concombres et oignons à l'huile d'olive • طماطم طازجة، خيار و بصل، زيت الزيتون</p>
+              </div>
+              <div class="item-price-actions">
+                <div class="item-price-val">400 DA</div>
+                <button class="btn-add-accessible" aria-label="Ajouter Salade Fraîcheur à ma commande">+ Ajouter</button>
+              </div>
+            </div>
+
+            <div class="menu-row-item" data-name="Salade Océane" data-price="400">
+              <div class="item-main-details">
+                <div class="item-heading-line">
+                  <span class="item-name-fr">Salade Océane</span>
+                  <span class="item-name-ar">سلطة المحيط</span>
+                  <span class="dish-badge-pill">Entrée Froide</span>
+                </div>
+                <p class="item-description-text">Laitue, tomates, concombre, thon et œuf dur • خس، طماطم، خيار، تونة و بيض مسلوق</p>
+              </div>
+              <div class="item-price-actions">
+                <div class="item-price-val">400 DA</div>
+                <button class="btn-add-accessible" aria-label="Ajouter Salade Océane à ma commande">+ Ajouter</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 2. ENTRÉES CHAUDES (مقبلات ساخنة) -->
+        <div class="menu-category-group" data-category="entrees-chaudes">
+          <div class="menu-category-header">
+            <h3 class="category-title">Entrées Chaudes • مقبلات ساخنة</h3>
+          
+          </div>
+          <div class="menu-list-items">
+            
+            <div class="menu-row-item" data-name="Bourek Poulet" data-price="350">
+              <div class="item-main-details">
+                <div class="item-heading-line">
+                  <span class="item-name-fr">Bourek Poulet</span>
+                  <span class="item-name-ar">بوراك بالدجاج</span>
+                  <span class="dish-badge-pill">Chaud</span>
+                </div>
+                <p class="item-description-text">Feuille dorée croustillante farcie au poulet assaisonné • بوراك بالدجاج</p>
+              </div>
+              <div class="item-price-actions">
+                <div class="item-price-val">350 DA</div>
+                <button class="btn-add-accessible" aria-label="Ajouter Bourek Poulet à ma commande">+ Ajouter</button>
+              </div>
+            </div>
+
+            <div class="menu-row-item" data-name="Bourek Viande Hachée" data-price="400">
+              <div class="item-main-details">
+                <div class="item-heading-line">
+                  <span class="item-name-fr">Bourek Viande Hachée</span>
+                  <span class="item-name-ar">بوراك باللحم المفروم</span>
+                  <span class="dish-badge-pill">Chaud</span>
+                </div>
+                <p class="item-description-text">Feuille croustillante généreusement farcie à la viande hachée pur bœuf • بوراك باللحم المفروم</p>
+              </div>
+              <div class="item-price-actions">
+                <div class="item-price-val">400 DA</div>
+                <button class="btn-add-accessible" aria-label="Ajouter Bourek Viande Hachée à ma commande">+ Ajouter</button>
+              </div>
+            </div>
+
+            <div class="menu-row-item" data-name="Hrira Soupe Traditionnelle" data-price="300">
+              <div class="item-main-details">
+                <div class="item-heading-line">
+                  <span class="item-name-fr">Hrira</span>
+                  <span class="item-name-ar">حريرة</span>
+                  <span class="dish-badge-pill gold">Soupe Traditionnelle</span>
+                </div>
+                <p class="item-description-text">Soupe traditionnelle • شوربة تقليدية</p>
+              </div>
+              <div class="item-price-actions">
+                <div class="item-price-val">300 DA</div>
+                <button class="btn-add-accessible" aria-label="Ajouter Hrira à ma commande">+ Ajouter</button>
+              </div>
+            </div>
+
+            <div class="menu-row-item" data-name="Pastilla Poulet" data-price="700">
+              <div class="item-main-details">
+                <div class="item-heading-line">
+                  <span class="item-name-fr">Pastilla Poulet</span>
+                  <span class="item-name-ar">بسطيلة بالدجاج</span>
+                  <span class="dish-badge-pill gold">Signature Maison</span>
+                </div>
+                <p class="item-description-text"> Aux poulet et amandes •  بالدجاج و اللوز</p>
+              </div>
+              <div class="item-price-actions">
+                <div class="item-price-val">700 DA</div>
+                <button class="btn-add-accessible" aria-label="Ajouter Pastilla Poulet à ma commande">+ Ajouter</button>
+              </div>
+            </div>
+
+            <div class="menu-row-item" data-name="Pastilla Royale Poissons" data-price="1200">
+              <div class="item-main-details">
+                <div class="item-heading-line">
+                  <span class="item-name-fr">Pastilla Royale</span>
+                  <span class="item-name-ar">بسطيلة ملكية</span>
+                  <span class="dish-badge-pill gold">Prestige</span>
+                </div>
+                <p class="item-description-text">Aux poissons et fruits de mer (Selon disponibilité) • بالسمك و ثمار البحر (حسب التوفر)</p>
+              </div>
+              <div class="item-price-actions">
+                <div class="item-price-val">1 200 DA</div>
+                <button class="btn-add-accessible" aria-label="Ajouter Pastilla Royale à ma commande">+ Ajouter</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 3. TAJINES (طواجن) -->
+        <div class="menu-category-group" data-category="tajines">
+          <div class="menu-category-header">
+            <h3 class="category-title">Tajines • طواجن</h3>
+            
+          </div>
+          <div class="menu-list-items">
+            
+            <div class="menu-row-item" data-name="Tajine Poulet Olives Citron" data-price="1200">
+              <div class="item-main-details">
+                <div class="item-heading-line">
+                  <span class="item-name-fr">Tajine Poulet, Olives et Citron Confit</span>
+                  <span class="item-name-ar">طاجين دجاج بالزيتون و الليمون المصير</span>
+                  <span class="dish-badge-pill">Tajine</span>
+                </div>
+                <p class="item-description-text">Morceaux de poulet tendres mijotés aux olives et citrons confits traditionnels.</p>
+              </div>
+              <div class="item-price-actions">
+                <div class="item-price-val">1 200 DA</div>
+                <button class="btn-add-accessible" aria-label="Ajouter Tajine Poulet à ma commande">+ Ajouter</button>
+              </div>
+            </div>
+
+            <div class="menu-row-item" data-name="Tajine Kefta aux Œufs" data-price="1400">
+              <div class="item-main-details">
+                <div class="item-heading-line">
+                  <span class="item-name-fr">Tajine Kefta aux Œufs</span>
+                  <span class="item-name-ar">طاجين كفتة بالبيض</span>
+                  <span class="dish-badge-pill gold">Incontournable</span>
+                </div>
+                <p class="item-description-text">Boulettes de bœuf assaisonnées, sauce tomate mijotée aux herbes et œufs fermiers pochés.</p>
+              </div>
+              <div class="item-price-actions">
+                <div class="item-price-val">1 400 DA</div>
+                <button class="btn-add-accessible" aria-label="Ajouter Tajine Kefta à ma commande">+ Ajouter</button>
+              </div>
+            </div>
+
+            <div class="menu-row-item" data-name="Tajine Viande Pruneaux Amandes" data-price="2300">
+              <div class="item-main-details">
+                <div class="item-heading-line">
+                  <span class="item-name-fr">Tajine Viande, Pruneaux et Amandes</span>
+                  <span class="item-name-ar">طاجين اللحم بالبرقوق و اللوز</span>
+                  <span class="dish-badge-pill gold">Prestige</span>
+                </div>
+                <p class="item-description-text">Viande de veau fondante confite, pruneaux doux caramélisés et amandes croquantes dorées.</p>
+              </div>
+              <div class="item-price-actions">
+                <div class="item-price-val">2 300 DA</div>
+                <button class="btn-add-accessible" aria-label="Ajouter Tajine Viande Pruneaux à ma commande">+ Ajouter</button>
+              </div>
+            </div>
+
+            <div class="menu-row-item" data-name="Tanjia Maison" data-price="2500">
+              <div class="item-main-details">
+                <div class="item-heading-line">
+                  <span class="item-name-fr">Tanjia Maison</span>
+                  <span class="item-name-ar">طنجية الدار</span>
+                  <span class="dish-badge-pill gold">Spécialité Maison</span>
+                </div>
+                <p class="item-description-text">Spécialité traditionnelle mijotée à l'étouffée • تخصص تقليدي مطهو على مهل</p>
+              </div>
+              <div class="item-price-actions">
+                <div class="item-price-val">2 500 DA</div>
+                <button class="btn-add-accessible" aria-label="Ajouter Tanjia Maison à ma commande">+ Ajouter</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 4. BROCHETTES (مشاوي) -->
+        <div class="menu-category-group" data-category="brochettes">
+          <div class="menu-category-header">
+            <h3 class="category-title">Brochettes • مشاوي</h3>
+           
+          </div>
+          <div class="menu-list-items">
+            
+            <!-- Brochettes de viande (AUCUN grammage selon consigne) -->
+            <div class="menu-row-item" data-name="Brochettes de Viande" data-price="1500">
+              <div class="item-main-details">
+                <div class="item-heading-line">
+                  <span class="item-name-fr">Brochettes de Viande</span>
+                  <span class="item-name-ar">مشاوي لحم</span>
+                  <span class="dish-badge-pill">Grillade</span>
+                </div>
+                <p class="item-description-text">Morceaux de viande rouge tendre avec épices authentiques • مشاوي لحم</p>
+              </div>
+              <div class="item-price-actions">
+                <div class="item-price-val">1 500 DA</div>
+                <button class="btn-add-accessible" aria-label="Ajouter Brochettes de Viande à ma commande">+ Ajouter</button>
+              </div>
+            </div>
+
+            <div class="menu-row-item" data-name="Brochettes de Poulet Marinées" data-price="1200">
+              <div class="item-main-details">
+                <div class="item-heading-line">
+                  <span class="item-name-fr">Brochettes de Poulet Marinées</span>
+                  <span class="item-name-ar">مشاوي دجاج متبل</span>
+                  <span class="dish-badge-pill">Grillade</span>
+                </div>
+                <p class="item-description-text">Filets de poulet marinés aux herbes fraîches et épices douces • مشاوي دجاج متبل</p>
+              </div>
+              <div class="item-price-actions">
+                <div class="item-price-val">1 200 DA</div>
+                <button class="btn-add-accessible" aria-label="Ajouter Brochettes de Poulet à ma commande">+ Ajouter</button>
+              </div>
+            </div>
+
+            <!-- Brochettes de kefta grillées (GRAMMAGE STRICTEMENT SUR KEFTA) -->
+            <div class="menu-row-item" data-name="Brochettes de Kefta Grillées" data-price="1400">
+              <div class="item-main-details">
+                <div class="item-heading-line">
+                  <span class="item-name-fr">Brochettes de Kefta Grillées</span>
+                  <span class="item-name-ar">مشاوي كفتة مشوية</span>
+                  <span class="dish-badge-pill weight-badge">Disponible au poids</span>
+                </div>
+                <p class="item-description-text"><strong>Disponible au poids : 250 grammes • 500 grammes • 1 kilo</strong><br>متوفرة حسب الوزن : 250 غرام • 500 غرام • 1 كيلو</p>
+              </div>
+              <div class="item-price-actions">
+                <div class="item-price-val">1 400 DA</div>
+                <button class="btn-add-accessible" aria-label="Ajouter Brochettes de Kefta à ma commande">+ Ajouter</button>
+              </div>
+            </div>
+
+            <div class="menu-row-item" data-name="Brochettes Mixtes" data-price="1600">
+              <div class="item-main-details">
+                <div class="item-heading-line">
+                  <span class="item-name-fr">Brochettes Mixtes</span>
+                  <span class="item-name-ar">مشاوي مشكلة</span>
+                  <span class="dish-badge-pill gold">Assortiment</span>
+                </div>
+                <p class="item-description-text">Assortiment de brochettes • تشكيلة من المشاوي</p>
+              </div>
+              <div class="item-price-actions">
+                <div class="item-price-val">1 600 DA</div>
+                <button class="btn-add-accessible" aria-label="Ajouter Brochettes Mixtes à ma commande">+ Ajouter</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 5. BOISSONS (مشروبات) -->
+        <div class="menu-category-group" data-category="boissons">
+          <div class="menu-category-header">
+            <h3 class="category-title">Boissons • مشروبات</h3>
+            
+          </div>
+          <div class="menu-list-items">
+            
+            <div class="menu-row-item" data-name="Soda Petite Bouteille" data-price="100">
+              <div class="item-main-details">
+                <div class="item-heading-line">
+                  <span class="item-name-fr">Soda Petite Bouteille</span>
+                  <span class="item-name-ar">صودا صغيرة</span>
+                  <span class="dish-badge-pill">Boisson</span>
+                </div>
+                <p class="item-description-text">Petite bouteille individuelle servie fraîche au choix • صودا صغيرة</p>
+              </div>
+              <div class="item-price-actions">
+                <div class="item-price-val">100 DA</div>
+                <button class="btn-add-accessible" aria-label="Ajouter Soda Petite Bouteille à ma commande">+ Ajouter</button>
+              </div>
+            </div>
+
+            <div class="menu-row-item" data-name="Eau Minérale" data-price="100">
+              <div class="item-main-details">
+                <div class="item-heading-line">
+                  <span class="item-name-fr">Eau Minérale</span>
+                  <span class="item-name-ar">ماء معدني</span>
+                  <span class="dish-badge-pill">Boisson</span>
+                </div>
+                <p class="item-description-text">Bouteille d'eau minérale naturelle servie fraîche • ماء معدني</p>
+              </div>
+              <div class="item-price-actions">
+                <div class="item-price-val">100 DA</div>
+                <button class="btn-add-accessible" aria-label="Ajouter Eau Minérale à ma commande">+ Ajouter</button>
+              </div>
+            </div>
+
+            <div class="menu-row-item" data-name="Thé à la Menthe Théière" data-price="150">
+              <div class="item-main-details">
+                <div class="item-heading-line">
+                  <span class="item-name-fr">Thé à la Menthe - Théière</span>
+                  <span class="item-name-ar">شاي بالنعناع - إبريق</span>
+                  <span class="dish-badge-pill gold">Tradition</span>
+                </div>
+                <p class="item-description-text">Thé vert infusé à la menthe fraîche servi en théière traditionnelle • شاي بالنعناع - إبريق</p>
+              </div>
+              <div class="item-price-actions">
+                <div class="item-price-val">150 DA</div>
+                <button class="btn-add-accessible" aria-label="Ajouter Thé à la Menthe à ma commande">+ Ajouter</button>
+              </div>
+            </div>
+
+            <div class="menu-row-item" data-name="Jus de Citron Maison" data-price="200">
+              <div class="item-main-details">
+                <div class="item-heading-line">
+                  <span class="item-name-fr">Jus de Citron - Maison</span>
+                  <span class="item-name-ar">عصير الليمون - منزلي</span>
+                  <span class="dish-badge-pill">Frais Maison</span>
+                </div>
+                <p class="item-description-text">Citrons frais pressés minute et sucre doux naturel • عصير الليمون - منزلي</p>
+              </div>
+              <div class="item-price-actions">
+                <div class="item-price-val">200 DA</div>
+                <button class="btn-add-accessible" aria-label="Ajouter Jus de Citron Maison à ma commande">+ Ajouter</button>
+              </div>
+            </div>
+
+            <div class="menu-row-item" data-name="Sodas et Jus 1L" data-price="200">
+              <div class="item-main-details">
+                <div class="item-heading-line">
+                  <span class="item-name-fr">Sodas et Jus - 1 Litre</span>
+                  <span class="item-name-ar">صودا و عصير - 1 لتر</span>
+                  <span class="dish-badge-pill">Format 1L</span>
+                </div>
+                <p class="item-description-text">Bouteille grand format familial d'un litre au choix • صودا و عصير - 1 لتر</p>
+              </div>
+              <div class="item-price-actions">
+                <div class="item-price-val">200 DA</div>
+                <button class="btn-add-accessible" aria-label="Ajouter Sodas et Jus 1L à ma commande">+ Ajouter</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 6. DESSERTS (حلويات) -->
+        <div class="menu-category-group" data-category="desserts">
+          <div class="menu-category-header">
+            <h3 class="category-title">Desserts • حلويات</h3>
+            
+          </div>
+          <div class="menu-list-items">
+            
+            <div class="menu-row-item" data-name="Briouat aux Amandes" data-price="250">
+              <div class="item-main-details">
+                <div class="item-heading-line">
+                  <span class="item-name-fr">Briouat aux Amandes</span>
+                  <span class="item-name-ar">بريوات باللوز</span>
+                  <span class="dish-badge-pill gold">Pâtisserie Fine</span>
+                </div>
+                <p class="item-description-text">Pâtisserie feuilletée au miel pur et amandes douces (Dessert selon disponibilités) • حلويات حسب التوفر</p>
+              </div>
+              <div class="item-price-actions">
+                <div class="item-price-val">250 DA</div>
+                <button class="btn-add-accessible" aria-label="Ajouter Briouat aux Amandes à ma commande">+ Ajouter</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- PANNEAU DE COMMANDE & CALCULATEUR (CONFORME À L'IMAGE DE RÉFÉRENCE 2) -->
+      <div class="order-calculator-card">
+        <div class="order-calc-head">
+          <div>
+            <h3>Votre Sélection Gourmande</h3>
+            <p id="order-items-count">0 plat(s) sélectionné(s)</p>
+          </div>
+          <div id="order-total-price" class="order-calc-total-val">0 DA</div>
+        </div>
+
+        <div id="cart-items-preview" class="order-cart-items-list"></div>
+
+        <div class="order-calc-actions-row">
+          <!-- RÈGLE STRICTE DU CLIENT : AUCUN MESSAGE AUTOMATIQUE POUR WHATSAPP DE COMMANDE -->
+          <a id="btn-whatsapp-order" href="https://wa.me/213542738379" target="_blank" rel="noopener noreferrer" class="btn-submit-order-whatsapp" style="opacity: 0.7;">
+            <span>TRANSMETTRE MA COMMANDE SUR WHATSAPP</span>
+          </a>
+          <button id="btn-clear-cart" class="btn-reset-order-cart">VIDER LA SÉLECTION</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION TRAITEUR, SERVICE TRAITEUR & SERVICE DE LIVRAISON
+       (SANS AUCUN EMOJI, AVEC VRAIS VECTEURS SVG ÉLÉGANTS)
+       ========================================================================== -->
+  <section id="traiteur" class="section-chef-editorial" style="background-color: var(--color-bg);">
+    <div class="container">
+      
+      <div class="section-header-editorial">
+        <span class="section-eyebrow-gold">Prestations Exclusives</span>
+        <h2 class="section-title-editorial">Traiteur pour vos événements, Service traiteur & Service de livraison</h2>
+        <div class="section-sep-gold"></div>
+        <p class="section-desc-editorial">
+          Que ce soit chez vous, au bureau ou pour vos grandes célébrations, La Pastilla sublime vos instants gourmands.
+        </p>
+      </div>
+
+      <!-- Grille des 3 services (SANS EMOJIS) -->
+      <div class="traiteur-cards-grid">
+        
+        <!-- 1. SERVICE DE LIVRAISON (Vecteur SVG) -->
+        <div class="traiteur-card">
+          <div class="traiteur-icon-circle">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor"><path d="M19 7c0-1.1-.9-2-2-2h-3v2h3v2.65L13.52 14H10V9H6c-2.21 0-4 1.79-4 4v3h2c0 1.66 1.34 3 3 3s3-1.34 3-3h4.48l3.65-4.56c.55-.69.87-1.56.87-2.44V7zM7 17c-.55 0-1-.45-1-1h2c0 .55-.45 1-1 1zm12-5.5V13h-2.12l-1.6-2H17c.55 0 1 .45 1 .5zM17 19c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm0-4c-.55 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1zM5 11h3v2H4.2A2.008 2.008 0 0 1 5 11z"/></svg>
+          </div>
+          <h3 class="traiteur-card-title">SERVICE DE LIVRAISON</h3>
+          <p class="traiteur-card-p">
+            À domicile ou au bureau,<br>
+            savourez La Pastilla où que vous soyez.
+          </p>
+        </div>
+
+        <!-- 2. TRAITEUR POUR VOS ÉVÉNEMENTS (Vecteur SVG) -->
+        <div class="traiteur-card">
+          <div class="traiteur-icon-circle">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a2 2 0 0 0-2 2c0 .35.09.68.25.96C6.67 7.07 4 10.74 4 15h16c0-4.26-2.67-7.93-6.25-9.04.16-.28.25-.61.25-.96a2 2 0 0 0-2-2zm-10 14v2h20v-2H2z"/></svg>
+          </div>
+          <h3 class="traiteur-card-title">TRAITEUR POUR VOS ÉVÉNEMENTS</h3>
+          <p class="traiteur-card-p">
+            Mariages, entreprises, anniversaires ou autres occasions,<br>
+            nous nous occupons de tout pour faire de votre événement un moment inoubliable.
+          </p>
+        </div>
+
+        <!-- 3. UN CONCEPT UNIQUE (Vecteur SVG) -->
+        <div class="traiteur-card">
+          <div class="traiteur-icon-circle">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.69 2 6 4.69 6 8c0 .28.02.56.07.83A4.5 4.5 0 0 0 3 13.25C3 15.6 4.9 17.5 7.25 17.5H16.75C19.1 17.5 21 15.6 21 13.25a4.5 4.5 0 0 0-3.07-4.42c.05-.27.07-.55.07-.83 0-3.31-2.69-6-6-6zm-6 17v2h12v-2H6zm6-11.5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5S10.5 9.83 10.5 9s.67-1.5 1.5-1.5z"/></svg>
+          </div>
+          <h3 class="traiteur-card-title">UN CONCEPT UNIQUE</h3>
+          <div class="traiteur-concept-slogan">“VOUS NE FAITES RIEN, ON FAIT TOUT”</div>
+          <p class="traiteur-card-p">
+            Notre équipe cuisine directement chez vous pour que vous profitiez pleinement de vos invités et d'un repas digne d'un restaurant, dans le confort de votre maison.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Bouton d'action direct WhatsApp pour livraison et traiteur -->
+      <div style="margin-top: 2.5rem; text-align: center;">
+        <a href="https://wa.me/213542738379?text=Bonjour%20La%20Pastilla,%20je%20souhaite%20commander%20en%20livraison%20ou%20demander%20un%20devis%20pour%20le%20service%20traiteur." target="_blank" rel="noopener noreferrer" class="btn-main" style="padding: 0.95rem 2rem;">
+          <span> Demander un Devis Traiteur (WhatsApp)</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION RÉSERVATION, INFOS PRATIQUES & RÉSEAUX SOCIAUX
+       ========================================================================== -->
+  <section id="contact" class="section-booking-editorial">
+    <div class="container">
+      
+      <div class="section-header-editorial">
+        <span class="section-eyebrow-gold">Coordonnées & Réservations</span>
+        <h2 class="section-title-editorial">Réservation, Informations Pratiques & Réseaux</h2>
+        <div class="section-sep-gold"></div>
+        <p class="section-desc-editorial">
+          Réservez votre table en quelques clics et suivez le restaurant La Pastilla sur nos réseaux officiels.
+        </p>
+      </div>
+
+      <div class="booking-editorial-grid">
+        
+        <!-- Colonne Gauche : Fiche Informations Pratiques & Réseaux Sociaux -->
+        <div class="info-cards-container">
+          <h3>Informations Pratiques</h3>
+          
+          <div class="blueprint-entry">
+            <div class="blueprint-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="#0F5132"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+            </div>
+            <div class="blueprint-text">
+              <h5>Adresse Exacte</h5>
+              <p>05 Rue Aïssa Malki, Quartier Dallas (2ème tranche)<br>Sétif (19000), Algérie</p>
+            </div>
+          </div>
+
+          <div class="blueprint-entry">
+            <div class="blueprint-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="#0F5132"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            </div>
+            <div class="blueprint-text">
+              <h5>Téléphone & WhatsApp</h5>
+              <p><strong>+213 542 73 83 79</strong> / 0542 73 83 79<br>Réservations de tables et commandes à emporter.</p>
+            </div>
+          </div>
+
+          <div class="blueprint-entry">
+            <div class="blueprint-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="#0F5132"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+            </div>
+            <div class="blueprint-text">
+              <h5>Horaires de Service</h5>
+              <p>
+                <strong>Déjeuner :</strong> 11h30 – 15h30<br>
+                <strong>Dîner :</strong> 18h30 – 23h00<br>
+                <strong>Lundi — Samedi</strong> • <em>Fermé le Dimanche</em>
+              </p>
+            </div>
+          </div>
+
+          <div class="blueprint-entry">
+            <div class="blueprint-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="#0F5132"><path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z"/></svg>
+            </div>
+            <div class="blueprint-text">
+              <h5>Prestations</h5>
+              <p>Service en salle climatisée, Livraison à domicile & bureau, Service traiteur.</p>
+            </div>
+          </div>
+
+          <!-- Section Réseaux Sociaux avec Vrais Logos SVG Officiels et Liens Exacts -->
+          <div class="social-official-block">
+            <h4 class="social-official-heading">Suivez Nos Réseaux Officiels</h4>
+            <div class="social-badges-grid">
+              
+              <!-- TikTok -->
+              <a href="https://www.tiktok.com/@la.pastilla.setif?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer" class="social-official-pill tiktok" title="Ouvrir le compte TikTok officiel">
+                <span class="social-svg-wrap">
+                  <svg class="social-icon-svg" viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.88 2.89 2.89 0 0 1-2.89-2.88 2.89 2.89 0 0 1 2.89-2.88c.4 0 .78.07 1.13.2v-3.5a6.38 6.38 0 0 0-1.13-.1 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V9.21a8.28 8.28 0 0 0 4.84 1.56V7.32a4.83 4.83 0 0 1-1.08-.63z"/>
+                  </svg>
+                </span>
+                <span class="social-label-text">
+                  <strong>TikTok</strong>
+                  <small>@la.pastilla.setif</small>
+                </span>
+              </a>
+
+              <!-- Instagram -->
+              <a href="https://www.instagram.com/la.pastilla.setif?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="social-official-pill instagram" title="Ouvrir le profil Instagram officiel">
+                <span class="social-svg-wrap">
+                  <svg class="social-icon-svg" viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                  </svg>
+                </span>
+                <span class="social-label-text">
+                  <strong>Instagram</strong>
+                  <small>@la.pastilla.setif</small>
+                </span>
+              </a>
+
+              <!-- Facebook -->
+              <a href="https://www.facebook.com/share/1La5Tbj6ua/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="social-official-pill facebook" title="Ouvrir la page Facebook officielle">
+                <span class="social-svg-wrap">
+                  <svg class="social-icon-svg" viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                  </svg>
+                </span>
+                <span class="social-label-text">
+                  <strong>Facebook</strong>
+                  <small>La pastilla | Sétif</small>
+                </span>
+              </a>
+
+              <!-- Google Maps -->
+              <a href="https://maps.app.goo.gl/nWzznaTqKuvFJxGe6" target="_blank" rel="noopener noreferrer" class="social-official-pill gmaps" title="Voir sur Google Maps">
+                <span class="social-svg-wrap">
+                  <svg class="social-icon-svg" viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/>
+                  </svg>
+                </span>
+                <span class="social-label-text">
+                  <strong>Google Maps</strong>
+                  <small>Avis & Itinéraire</small>
+                </span>
+              </a>
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Colonne Droite : Formulaire de Réservation Directe -->
+        <div id="reservation" class="form-card-editorial">
+          <h3>Réserver Votre Table</h3>
+          <p>Confirmation immédiate enregistrée par notre système sécurisé et transmise au restaurant.</p>
+
+          <form id="table-booking-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="book-name">Nom & Prénom</label>
+                <input type="text" id="book-name" class="input-box"  required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="book-phone">Téléphone</label>
+                <input type="tel" id="book-phone" class="input-box" placeholder="05XX XX XX XX" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="book-date">Date de Réservation</label>
+                <input type="date" id="book-date" class="input-box" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Service Souhaité</label>
+                <!-- Boutons de service SANS EMOJIS (selon consigne stricte) -->
+                <div class="service-select-group">
+                  <button type="button" class="service-btn-option" data-service="dejeuner">
+                    <span class="service-name">Déjeuner</span>
+                    <span class="service-hours">11h30 – 15h30</span>
+                  </button>
+                  <button type="button" class="service-btn-option active" data-service="diner">
+                    <span class="service-name">Dîner</span>
+                    <span class="service-hours">18h30 – 23h00</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="book-exact-time">Heure d'Arrivée Souhaitée (Saisie Libre)</label>
+                <input type="time" id="book-exact-time" class="input-box" required value="20:00" min="18:30" max="23:00">
+                <small id="service-time-hint" class="form-time-hint">Service Dîner : veuillez saisir votre heure d'arrivée exacte entre 18h30 et 23h00.</small>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="book-guests">Nombre de Convives</label>
+                <select id="book-guests" class="input-box" required>
+                  <option value="1 personne">1 personne</option>
+                  <option value="2 personnes">2 personnes</option>
+                  <option value="3 personnes">3 personnes</option>
+                  <option value="4 personnes" selected>4 personnes</option>
+                  <option value="5 personnes">5 personnes</option>
+                  <option value="6 personnes">6 personnes</option>
+                  <option value="8 personnes ou plus">8 personnes ou plus (Grande tablée)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="book-notes">Souhaits Particuliers (Optionnel)</label>
+              <input type="text" id="book-notes" class="input-box" placeholder="Table au calme, anniversaire...">
+            </div>
+
+            <div id="booking-alert-status" style="display: none; padding: 0.9rem 1.1rem; border-radius: var(--radius-sm); margin-bottom: 1.2rem; font-size: 0.9rem;"></div>
+
+            <button type="submit" class="btn-main" style="width: 100%; padding: 0.95rem; margin-top: 0.5rem; font-size: 0.9rem;">
+              <span>Confirmer Ma Réservation</span>
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER DU SITE
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      
+      <div class="footer-main-grid">
+        <div>
+          <h4 class="footer-brand-title">La Pastilla</h4>
+          <p class="footer-brand-p">
+            L'art des pastillas croustillantes dorées au four, des grands tajines en terre cuite et des grillades au feu de braise dans un décor chaleureux et feutré.
+          </p>
+        </div>
+
+        <div>
+          <h5 class="footer-col-heading">Navigation</h5>
+          <ul class="footer-links-list">
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#chef">Le Chef Pipo</a></li>
+            <li><a href="#atmosphere">Atmosphère & Plats</a></li>
+            <li><a href="#carte">La Carte des Mets</a></li>
+            <li><a href="#traiteur">Traiteur & Livraison</a></li>
+            <li><a href="#contact">Réservations & Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h5 class="footer-col-heading">Nos Coordonnées</h5>
+          <ul class="footer-links-list">
+            <li>05 Rue Aïssa Malki, Quartier Dallas, Sétif</li>
+            <li> +213 542 73 83 79</li>
+            <li>Déjeuner : 11h30 – 15h30</li>
+            <li>Dîner : 18h30 – 23h00</li>
+            <li>Dimanche fermé</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>© 2026 Restaurant La Pastilla — Sétif, Algérie. Tous droits réservés.</div>
+        <div>Haute Cuisine Traditionnelle Raffinée & Authentique • Sétif</div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Script JavaScript sécurisé -->
+  <script src="js/main.js"></script>
+</body>
+</html>
