@@ -71,3 +71,8 @@ la-pastilla/
     ├── traiteur-service-concept.png # Visuel officiel prestations
     └── atmosphere-*.jpg        # Photographies réelles Google Maps
 ```
+##  Technologies utilisées
+
+ **Front-End :** HTML5, CSS3, JavaScript (Vanilla).
+ **Intégrations & Outils :** Intégration WhatsApp (Prise de commande / Contact/Réservation de table).
+**Versioning & Déploiement :** Git, GitHub
